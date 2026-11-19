@@ -1,14 +1,3 @@
-const emailLink = document.querySelector("#email-apply");
-const subject = "Отклик на вакансию электрогазосварщика";
-const body = [
-  "Здравствуйте! Хочу откликнуться на вакансию электрогазосварщика.",
-  "",
-  "Имя:",
-  "Телефон:",
-  "Разряд и опыт работы:",
-].join("\r\n");
-emailLink.href = `mailto:hr@unicont.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
 const heroForm = document.querySelector(".callback-form");
 const dialog = document.querySelector(".callback-dialog");
 const dialogForm = heroForm.cloneNode(true);
