@@ -15,8 +15,8 @@ const dialogForm = heroForm.cloneNode(true);
 dialog.append(dialogForm);
 
 for (const form of [heroForm, dialogForm]) {
-  const name = form.elements.namedItem("Имя");
-  const phone = form.elements.namedItem("Телефон");
+  const phone = form.querySelector('input[type="tel"]');
+  form.querySelector('button[type="submit"]').disabled = false;
   phone.addEventListener("input", () => phone.setCustomValidity(""));
 
   form.addEventListener("submit", (event) => {
@@ -29,13 +29,9 @@ for (const form of [heroForm, dialogForm]) {
       return;
     }
 
-    const message = [
-      "Здравствуйте! Хочу откликнуться на вакансию электрогазосварщика.",
-      "",
-      `Имя: ${name.value.trim()}`,
-      `Телефон: ${number}`,
-    ].join("\r\n");
-    window.location.href = `mailto:hr@unicont.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    form.querySelector('[role="status"]').textContent =
+      "Форма заполнена. В демонстрационной версии отправка отключена.";
+    form.reset();
   });
 }
 
@@ -44,7 +40,7 @@ for (const trigger of document.querySelectorAll("[data-open-application]")) {
     if (typeof dialog.showModal !== "function") return;
     event.preventDefault();
     dialog.showModal();
-    dialogForm.elements.namedItem("Имя").focus({ preventScroll: true });
+    dialogForm.querySelector("input").focus({ preventScroll: true });
   });
 }
 dialog.querySelector(".dialog-close").addEventListener("click", () => dialog.close());

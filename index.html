@@ -48,11 +48,11 @@
         </div>
         <div class="callback-card" id="callback">
           <h2>Откликнуться на вакансию</h2>
-          <form class="callback-form" action="mailto:hr@unicont.com" method="post" enctype="text/plain">
-            <label>Имя<input name="Имя" type="text" autocomplete="given-name" maxlength="80" required></label>
-            <label>Номер телефона<input name="Телефон" type="tel" autocomplete="tel" maxlength="30" required></label>
-            <button type="submit" class="button button-primary">Открыть письмо</button>
-            <p class="form-note">Откроется черновик письма для отдела кадров. Отправьте его в почтовом приложении.</p>
+          <form class="callback-form">
+            <label>Имя<input type="text" autocomplete="given-name" maxlength="80" pattern=".*\S.*" required></label>
+            <label>Номер телефона<input type="tel" autocomplete="tel" maxlength="30" required></label>
+            <button type="submit" class="button button-primary" disabled>Откликнуться</button>
+            <p class="form-note" role="status">Демонстрационная форма. Отправка отключена.</p>
           </form>
         </div>
         </div>
@@ -203,6 +203,6 @@
     <button type="button" class="dialog-close" aria-label="Закрыть форму">×</button>
     <h2 id="dialog-title">Откликнуться на вакансию</h2>
   </dialog>
-  <script src="script.js?v=2" defer></script>
+  <script src="script.js?v=3" defer></script>
 </body>
 </html>
