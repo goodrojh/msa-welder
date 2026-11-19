@@ -26,35 +26,47 @@
       <nav aria-label="Разделы вакансии">
         <a href="#work">Задачи</a>
         <a href="#conditions">Условия</a>
-        <a href="#company">О компании</a>
+        <a href="#location">Как добраться</a>
       </nav>
-      <a href="#apply" class="button button-outline" data-event="apply_header">Откликнуться</a>
+      <a href="#callback" class="button button-outline" data-open-application data-event="apply_header">Откликнуться</a>
     </div>
   </header>
   <main id="main">
     <section id="top" class="hero" aria-labelledby="role">
       <div class="hero-photo" aria-hidden="true"></div>
       <div class="shell hero-inner">
+        <div class="hero-grid">
         <div class="hero-content">
-          <p class="eyebrow"><span class="dash"></span> Санкт-Петербург · Производство</p>
+          <p class="hero-location">Санкт-Петербург</p>
           <h1 id="role">Электрогазо<wbr>сварщик</h1>
           <p class="hero-description">Сваривайте стальные узлы и металлоконструкции для промышленного и судового оборудования.</p>
           <div class="salary"><strong>155 925–221 375 ₽</strong><span>в месяц на руки</span></div>
-          <a class="button button-primary" href="#apply" data-event="apply_hero">Откликнуться на вакансию</a>
+          <div class="hero-contact">
+            <span>Отдел кадров</span>
+            <a href="tel:+78126022310" data-event="hr_call_hero">+7 (812) 602-23-10</a>
+          </div>
+        </div>
+        <div class="callback-card" id="callback">
+          <h2>Откликнуться на вакансию</h2>
+          <form class="callback-form" action="mailto:hr@unicont.com" method="post" enctype="text/plain">
+            <label>Имя<input name="Имя" type="text" autocomplete="given-name" maxlength="80" required></label>
+            <label>Номер телефона<input name="Телефон" type="tel" autocomplete="tel" maxlength="30" required></label>
+            <button type="submit" class="button button-primary">Открыть письмо</button>
+            <p class="form-note">Откроется черновик письма для отдела кадров. Отправьте его в почтовом приложении.</p>
+          </form>
+        </div>
         </div>
         <div class="hero-facts">
           <div><strong>4/2 или 3/3</strong><span>Дневные и ночные смены</span></div>
           <div><strong>От 1 года</strong><span>Опыт работы · 3–6 разряд</span></div>
           <div><strong>Развозка от метро</strong><span>Рыбацкое и Ломоносовская</span></div>
         </div>
-        <p class="image-note">Иллюстрация, созданная с помощью ИИ</p>
       </div>
     </section>
 
     <section id="work" class="section shell" aria-labelledby="work-title">
       <div class="section-intro">
-        <p class="eyebrow"><span class="dash"></span> Задачи и требования</p>
-        <h2 id="work-title">От чертежа<br>до готового шва</h2>
+        <h2 id="work-title">Работа на сварочном участке</h2>
         <p>Работа с деталями, узлами и ответственными стальными конструкциями средней и высокой сложности.</p>
       </div>
       <div class="work-grid">
@@ -82,8 +94,7 @@
     <section id="conditions" class="section conditions" aria-labelledby="conditions-title">
       <div class="shell">
         <div class="section-intro">
-          <p class="eyebrow"><span class="dash"></span> Условия работы</p>
-          <h2 id="conditions-title">График, оплата<br>и поддержка</h2>
+          <h2 id="conditions-title">График и условия работы</h2>
         </div>
         <div class="conditions-grid">
           <article class="schedule">
@@ -107,7 +118,6 @@
         <figcaption>Цех металлообработки НПК МСА</figcaption>
       </figure>
       <div class="company-copy">
-        <p class="eyebrow"><span class="dash"></span> О работодателе</p>
         <h2 id="company-title">НПК «Морсвязьавтоматика»</h2>
         <p>С 2003 года компания разрабатывает и выпускает оборудование для промышленности, судостроения и энергетики. Среди направлений — судовая электроника, станкостроение и металлообработка.</p>
         <div class="company-facts">
@@ -118,21 +128,37 @@
       </div>
     </section>
 
+    <section id="location" class="section location" aria-labelledby="location-title">
+      <div class="shell location-grid">
+        <div class="location-info">
+          <h2 id="location-title">Где предстоит работать</h2>
+          <p>Две площадки в Санкт-Петербурге. Отдел кадров подскажет, на какой из них открыта смена.</p>
+          <div class="locations">
+            <div class="location-address">
+              <button type="button" class="map-select" aria-pressed="true" aria-controls="location-map" data-map="https://yandex.ru/map-widget/v1/?text=Санкт-Петербург%2C%20Тепловозная%20улица%2C%2036">
+                <strong>Тепловозная ул., 36</strong>
+              </button>
+              <a href="https://yandex.ru/maps/?rtext=~Санкт-Петербург%2C%20Тепловозная%20улица%2C%2036&amp;rtt=auto" target="_blank" rel="noopener">Построить маршрут</a>
+            </div>
+            <div class="location-address">
+              <button type="button" class="map-select" aria-pressed="false" aria-controls="location-map" data-map="https://yandex.ru/map-widget/v1/?oid=1385273591&amp;ol=biz">
+                <strong>Ул. Кибальчича, 26Д</strong>
+              </button>
+              <a href="https://yandex.ru/maps/?rtext=~Санкт-Петербург%2C%20улица%20Кибальчича%2C%2026Д&amp;rtt=auto" target="_blank" rel="noopener">Построить маршрут</a>
+            </div>
+          </div>
+          <p>Есть развозка от метро Рыбацкое и Ломоносовская.</p>
+        </div>
+        <iframe id="location-map" src="https://yandex.ru/map-widget/v1/?text=Санкт-Петербург%2C%20Тепловозная%20улица%2C%2036" title="Яндекс Карты — Тепловозная ул., 36" loading="lazy" allowfullscreen></iframe>
+      </div>
+    </section>
+
     <section class="section faq shell" aria-labelledby="faq-title">
       <div class="section-intro">
-        <p class="eyebrow"><span class="dash"></span> Перед откликом</p>
         <h2 id="faq-title">Частые вопросы</h2>
       </div>
       <div class="faq-items">
         <details open>
-          <summary>Где находится производство?</summary>
-          <p>В вакансии указаны две площадки в Санкт-Петербурге: Тепловозная ул., 36 и ул. Кибальчича, 26Д. Уточните у отдела кадров, на какой площадке открыта ваша смена.</p>
-          <div class="map-links">
-            <a href="https://yandex.ru/maps/?text=Санкт-Петербург%2C%20Тепловозная%20улица%2C%2036">Тепловозная, 36 на карте</a>
-            <a href="https://yandex.ru/maps/?text=Санкт-Петербург%2C%20улица%20Кибальчича%2C%2026Д">Кибальчича, 26Д на карте</a>
-          </div>
-        </details>
-        <details>
           <summary>Зарплата указана после вычета налога?</summary>
           <p>Да, 155 925–221 375 ₽ в месяц на руки. Итоговую сумму работодатель обсуждает на собеседовании.</p>
         </details>
@@ -150,8 +176,7 @@
     <section id="apply" class="section apply" aria-labelledby="apply-title">
       <div class="shell apply-grid">
         <div>
-          <p class="eyebrow"><span class="dash"></span> Отклик на вакансию</p>
-          <h2 id="apply-title">Свяжитесь<br>с отделом кадров</h2>
+          <h2 id="apply-title">Контакты отдела кадров</h2>
           <p>Расскажите о своём опыте и разряде. У отдела кадров можно уточнить площадку и график.</p>
         </div>
         <div class="contact-card">
@@ -173,7 +198,11 @@
       <div><a href="https://unicont.com/career/">Карьера в НПК МСА</a><a href="https://spb.hh.ru/vacancy/139477885">Источник условий вакансии</a></div>
     </div>
   </footer>
-  <div class="mobile-apply"><a class="button button-primary" href="#apply" data-event="apply_mobile">Откликнуться на вакансию</a></div>
+  <div class="mobile-apply"><a class="button button-primary" href="#callback" data-open-application data-event="apply_mobile">Откликнуться на вакансию</a></div>
+  <dialog class="callback-dialog" aria-labelledby="dialog-title">
+    <button type="button" class="dialog-close" aria-label="Закрыть форму">×</button>
+    <h2 id="dialog-title">Откликнуться на вакансию</h2>
+  </dialog>
   <script src="script.js" defer></script>
 </body>
 </html>
